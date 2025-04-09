@@ -1,0 +1,19 @@
+(#%require (lib "27.ss" "srfi"))
+(random-source-randomize! default-random-source)
+
+(define (playGuess)
+  (define randNum (+ 1 (random-integer 100)))
+  (define (getGuess)
+    (display " Guess a number from 1 to 100: ")
+    (let ((num (read)))
+
+; (if (= num randNum)
+; (begin
+; (display "Correct! ")))
+; (if(< num randNum)
+;  (display "Higher"))
+;  (if(> num randNum)
+;     (display "Lower"))))
+
+
+
