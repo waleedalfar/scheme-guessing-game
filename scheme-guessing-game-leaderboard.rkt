@@ -32,7 +32,7 @@
   (define (getGuess)
     (display "Guess a number from 1 to 100: ")
     (let ((userNum (read)))
-      (set! guessCount (+ guessCount 1))
+      (set! guessCount (+ guessCount 1)) ; increment guessCount
       (cond
         ((= userNum randNum)
          (let ((userName (getName)))
@@ -40,7 +40,7 @@
            (display (string-append "Correct! " (number->string guessCount) " guesses... "))
            (set! results (cons (cons userName guessCount) results))))
         ((< userNum randNum)
-         (display "Go Higher...")
+         (display "Go Higher...") 
          (getGuess))
         ((> userNum randNum)
          (display "Go Lower...")
